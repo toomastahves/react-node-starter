@@ -38,7 +38,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlwebpackPlugin({
-      title: 'Shelter'
+      title: 'React starter'
     })
   ]
 }
