@@ -1,24 +1,24 @@
-'use strict';
-const HtmlwebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
-  resolve: { extensions: ['', '.js', '.jsx'] },
-  entry: { client: './client/index.jsx' },
+  resolve: { extensions: ['', '.js', '.jsx', '.css'] },
+  entry: [
+    './client/index.jsx'
+  ],
   output: {
-    path: './dist',
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
   },
   module: {
     loaders: [
-      { test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel' }
+      { test: /\.jsx$/, loaders: ['babel'], exclude: /node_modules/ },
+      { test: /\.css$/, loaders: ['style-loader', 'css-loader?modules&importLoaders=1', 'postcss-loader'], exclude: /node_modules/ }
     ]
   },
-  plugins: [
-    new HtmlwebpackPlugin({ template: './client/index.html' })
-  ],
   devServer: {
     inline: true,
     historyApiFallback: true,
-    port: 1337
+    port: 1337,
+    contentBase: './public'
   }
 };
