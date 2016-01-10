@@ -1,24 +1,26 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-  resolve: { extensions: ['', '.js', '.jsx', '.css'] },
+  devtool: 'cheap-module-eval-source-map',
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
   entry: [
-    './client/index.jsx'
+    'webpack-hot-middleware/client',
+    './client/index'
   ],
   output: {
-    path: path.join(__dirname, 'public'),
-    filename: 'bundle.js'
+    path: path.join(__dirname, 'public/assets'),
+    filename: 'bundle.js',
+    publicPath: '/assets/'
   },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
   module: {
     loaders: [
-      { test: /\.jsx$/, loaders: ['babel'], exclude: /node_modules/ },
-      { test: /\.css$/, loaders: ['style-loader', 'css-loader?modules&importLoaders=1', 'postcss-loader'], exclude: /node_modules/ }
+      { test: /\.jsx?$/, loaders: ['babel'], include: path.join(__dirname, 'client') }
     ]
-  },
-  devServer: {
-    inline: true,
-    historyApiFallback: true,
-    port: 1337,
-    contentBase: './public'
   }
 };

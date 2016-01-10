@@ -1,34 +1,27 @@
-CSS styles
+Run:
 ```
-npm i -D style-loader css-loader postcss-loader react-styleable
-```
-
-ESLint devDependencies:
-```
-npm i -D eslint babel-eslint eslint-plugin-react
+npm install
+npm start
 ```
 
-Babel devDependencies:
+Webpack deps:
+```npm i -D webpack webpack-dev-middleware webpack-hot-middleware babel-loader
 ```
-npm i -D babel-core babel-preset-es2015 babel-preset-react babel-preset-stage-0
+Babel deps:
+```npm i -D babel-preset-es2015 babel-preset-react babel-preset-react-hmre
 ```
-
-Webpack devDependencies:
+React deps:
+```npm i -S react react-dom
 ```
-npm i -D webpack webpack-dev-server babel-loader
+Back-end deps:
+```npm i -S express
 ```
-
-React dependencies:
+Back-end reload:
+```npm i -D nodemon
 ```
-npm i -S react react-dom
+Run Node through Babel
+```npm i -D babel-cli
 ```
-
-React Router dependencies:
-```
-npm i -S react-router history
-```
-
-Test devDependencies:
-```
-npm i -D mocha react-addons-test-utils
+ESLint deps:
+```npm i -D eslint babel-eslint eslint-plugin-react
 ```
