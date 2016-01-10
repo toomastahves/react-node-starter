@@ -4,24 +4,33 @@ npm install
 npm start
 ```
 
+Dep info:
+
 Webpack deps:
-```npm i -D webpack webpack-dev-middleware webpack-hot-middleware babel-loader
+```
+webpack webpack-dev-middleware webpack-hot-middleware babel-loader
 ```
 Babel deps:
-```npm i -D babel-preset-es2015 babel-preset-react babel-preset-react-hmre
+```
+babel-preset-es2015 babel-preset-react babel-preset-react-hmre
 ```
 React deps:
-```npm i -S react react-dom
+```
+react react-dom
 ```
 Back-end deps:
-```npm i -S express
+```
+express
 ```
 Back-end reload:
-```npm i -D nodemon
+```
+nodemon
 ```
 Run Node through Babel
-```npm i -D babel-cli
+```
+babel-cli
 ```
 ESLint deps:
-```npm i -D eslint babel-eslint eslint-plugin-react
+```
+eslint babel-eslint eslint-plugin-react
 ```
