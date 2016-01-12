@@ -32,5 +32,5 @@ babel-cli
 ```
 ESLint deps:
 ```
-eslint babel-eslint eslint-plugin-react
+eslint babel-eslint eslint-plugin-react eslint-plugin-babel babel-preset-stage-0
 ```
