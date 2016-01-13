@@ -12,7 +12,7 @@ webpack webpack-dev-middleware webpack-hot-middleware babel-loader
 ```
 Babel deps:
 ```
-babel-preset-es2015 babel-preset-react babel-preset-react-hmre
+babel-preset-es2015 babel-preset-stage-0 babel-preset-react babel-preset-react-hmre
 ```
 React deps:
 ```
