@@ -164,7 +164,7 @@
     "computed-property-spacing": [1, "never"],
     "consistent-this": [1, "self"],
     "eol-last": 1,
-    "func-names": 1,
+    "func-names": 0,
     "func-style": 0,
     "id-length": 0,
     "id-match": 0,
