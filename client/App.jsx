@@ -4,7 +4,7 @@ import style from './style.css';
 class App extends Component {
   render() {
     return (
-      <div className={style.custom}>{'hello world'}</div>
+      <div className={style.center}>{'hello world'}</div>
     );
   }
 }
