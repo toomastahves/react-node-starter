@@ -7,12 +7,8 @@ import webpack from './middleware/webpack';
 const app = express();
 
 app.use(express.static('public'));
-
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
 app.use(favicon('public/favicon.ico'));
-
 app.use(logger('dev'));
 
 app.set('port', (process.env.PORT || 1337));
