@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import style from './style.css';
-
 export class App extends Component {
   render() {
     return (
@@ -10,5 +9,4 @@ export class App extends Component {
     );
   }
 }
-
 export default App;
