@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/index.js",
-    "test": "NODE_PATH=. NODE_ENV=test mocha",
+    "test": "NODE_PATH=. NODE_ENV=test istanbul cover _mocha && codecov",
     "test:watch": "NODE_PATH=. NODE_ENV=test mocha --watch",
     "run:prod": "npm run build:prod && npm run start:prod",
     "build:prod": "NODE_ENV=production webpack --config webpack.config.prod.js",
@@ -28,11 +28,13 @@
   "devDependencies": {
     "babel-eslint": "^4.1.6",
     "chai": "^3.4.1",
+    "codecov": "^1.0.1",
     "css-modules-require-hook": "^2.1.0",
     "deep-freeze": "0.0.1",
     "eslint": "^1.10.3",
     "eslint-plugin-babel": "^3.0.0",
     "eslint-plugin-react": "^3.16.1",
+    "istanbul": "^1.0.0-alpha.2",
     "jsdom": "^8.0.0",
     "mocha": "^2.4.2",
     "nock": "^7.0.2",
