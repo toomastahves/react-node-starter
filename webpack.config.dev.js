@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
@@ -7,7 +6,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx']
   },
   entry: [
-    'webpack-hot-middleware/client',
+    'webpack-dev-server/client?http://localhost:1337',
     './client/index'
   ],
   output: {
@@ -15,10 +14,6 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/assets/'
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
-  ],
   module: {
     loaders: [
       { test: /\.jsx?$/, loaders: ['babel'], include: path.join(__dirname, 'client') },
