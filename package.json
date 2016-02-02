@@ -52,6 +52,7 @@
     "body-parser": "^1.14.2",
     "compression": "^1.6.1",
     "css-loader": "^0.23.1",
+    "errorhandler": "^1.4.3",
     "express": "^4.13.4",
     "helmet": "^1.1.0",
     "isomorphic-fetch": "^2.2.1",
@@ -62,6 +63,7 @@
     "react-redux": "^4.0.6",
     "redux": "^3.0.6",
     "redux-thunk": "^1.0.3",
+    "response-time": "^2.3.1",
     "serve-favicon": "^2.3.0",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.12"

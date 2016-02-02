@@ -1,15 +1,8 @@
-import express from 'express';
-import bodyParser from 'body-parser';
-import logger from 'morgan';
-import favicon from 'serve-favicon';
 import webpack from './webpack/devServer';
+import app from './express/app';
 
-const app = express();
-
-app.use(express.static('public'));
-app.use(bodyParser.json());
-app.use(favicon('public/favicon.ico'));
-app.use(logger('dev'));
+import { connectToDatabase } from './database/mongodb';
+connectToDatabase();
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
