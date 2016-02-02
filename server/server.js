@@ -1,4 +1,4 @@
-import webpack from './webpack/devServer';
+import { startWebpackDevServer } from './webpack/devServer';
 import app from './express/app';
 
 import { connectToDatabase } from './database/mongodb';
@@ -10,5 +10,5 @@ app.listen(port, () => {
 });
 
 if(process.env.NODE_ENV !== 'production') {
-  webpack();
+  startWebpackDevServer();
 }
