@@ -1,10 +1,10 @@
 import React from 'react';
-import style from './style.css';
+import Hello from './Hello';
 
 export const App = () => {
   return (
-    <div className={style.center}>
-      {'hello world'}
+    <div className='center'>
+      <Hello />
     </div>
   );
 };
