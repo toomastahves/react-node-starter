@@ -14,7 +14,7 @@ export const applyMiddleware = (app) => {
   app.use(bodyParser.json());
 
   if(process.env.NODE_ENV !== 'production') {
-    app.use(helmet.frameguard('allow-from', `*`));
+    app.use(helmet.frameguard('allow-from', '*'));
     app.use(errorhandler());
   }
 

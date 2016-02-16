@@ -20,7 +20,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   dispatch(sayHello('hello react-redux'));
-  return {};
+  return { dispatch };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Hello);
