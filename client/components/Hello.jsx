@@ -19,7 +19,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  dispatch(sayHello('hello react-redux'));
+  dispatch(sayHello('hello react'));
   return { dispatch };
 };
 
