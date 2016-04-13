@@ -1,5 +1,6 @@
 // For loading CSS modules
 import 'css-modules-require-hook';
+import 'babel-polyfill';
 
 // For creating in-memory HTML document
 import { jsdom } from 'jsdom';
