@@ -1,20 +1,19 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React, { PropTypes } from 'react';
+import Menu from './Menu';
 
-const handleDrawer = () => {
-  document.getElementById('drawer').classList.toggle('drawer-open');
-};
-
-export const Header = () => {
+export const Header = ({ handleDrawer }) => {
   return (
     <div className='header'>
       <div className='hamburger' onClick={handleDrawer}></div>
       <div className='menu'>
-        <Link to={'home'} activeClassName='menu-link-active'>{'Home'}</Link>
-        <Link to={'about'} activeClassName='menu-link-active'>{'About'}</Link>
+        <Menu />
       </div>
     </div>
   );
+};
+
+Header.propTypes = {
+  handleDrawer: PropTypes.func.isRequired
 };
 
 export default Header;

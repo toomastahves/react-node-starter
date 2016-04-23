@@ -6,14 +6,14 @@
   content: '☰';
 }
 
-.menu > a, .drawer-menu > a {
+.menu-link {
   color: #333;
   padding: 0 10px 0 10px;
   text-decoration: none;
   font-size: 1.4em;
 }
 
-.menu > a:hover, .drawer-menu > a:hover {
+.menu-link:hover {
   border-bottom: 1px solid red;
 }
 
@@ -43,4 +43,10 @@
   cursor: pointer;
   font-size: 1.6em;
   text-align: center;
+}
+
+@media (max-width: 640px) {
+  .menu {
+    visibility: hidden;
+  }
 }
