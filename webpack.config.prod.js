@@ -20,7 +20,8 @@ module.exports = {
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production')
+        'NODE_ENV': JSON.stringify('production'),
+        'SERVER_URI': JSON.stringify(process.env.SERVER_URI)
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
