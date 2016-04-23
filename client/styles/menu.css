@@ -1,0 +1,46 @@
+.hamburger {
+  cursor: pointer;
+  font-size: 1.6em;
+}
+.hamburger:after {
+  content: '☰';
+}
+
+.menu > a, .drawer-menu > a {
+  color: #333;
+  padding: 0 10px 0 10px;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+.menu > a:hover, .drawer-menu > a:hover {
+  border-bottom: 1px solid red;
+}
+
+.menu-link-active {
+  border-bottom: 1px solid red;
+}
+
+.drawer {
+  width: 100px;
+  left: -100px;
+  height: 100vh;
+  background-color: rgb(230, 230, 230);
+  position: absolute;
+  transition: left 0.4s;
+}
+
+.drawer-open {
+  left: 0px;
+}
+
+.drawer-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer-close {
+  cursor: pointer;
+  font-size: 1.6em;
+  text-align: center;
+}

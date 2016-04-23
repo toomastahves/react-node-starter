@@ -1,12 +1,15 @@
-import React from 'react';
-import Hello from './Hello';
+import React, { PropTypes } from 'react';
 
-export const App = () => {
+export const App = ({ children }) => {
   return (
-    <div className='center'>
-      <Hello />
+    <div>
+      {children}
     </div>
   );
+};
+
+App.propTypes = {
+  children: PropTypes.object.isRequired
 };
 
 export default App;
