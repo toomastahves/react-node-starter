@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { helloReducer } from './hello';
+import { apiReducer } from './api';
 
 const reducers = combineReducers({
-  helloReducer
+  apiReducer
 });
 
 export default reducers;

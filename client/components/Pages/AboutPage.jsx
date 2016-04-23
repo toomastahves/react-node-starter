@@ -3,7 +3,7 @@ import ContentLayout from '../Layouts/Content';
 
 export const AboutPage = () => {
   return (
-    <div>{'AboutPage'}</div>
+    <div>{'About content'}</div>
   );
 };
 

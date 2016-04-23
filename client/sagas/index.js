@@ -1,8 +1,6 @@
 import { fork } from 'redux-saga/effects';
-import { watchHelloWorld } from './hello';
+import { watchGetHomeContent } from './api';
 
-export default function* rootSaga() {
-  yield [
-    fork(watchHelloWorld)
-  ];
+export default function* root() {
+  yield fork(watchGetHomeContent);
 }

@@ -1,28 +1,30 @@
 import { expect } from 'chai';
 import deepFreeze from 'deep-freeze';
-import { helloReducer } from 'client/reducers/hello';
-import { SAY_HELLO } from 'client/constants/hello';
+import { apiReducer } from 'client/reducers/api';
+import { GET_HOME_CONTENT_SUCCESS } from 'client/constants/';
 
 describe('reducers', () => {
   let stateBefore = {};
   beforeEach(() => {
     stateBefore = {
-      message: 'hello'
+      fetching: true,
+      content: {}
     };
   });
 
   describe('tests helloReducer', () => {
     it('SAY_HELLO', () => {
       const action = {
-        type: SAY_HELLO,
-        message: 'hello'
+        type: GET_HOME_CONTENT_SUCCESS,
+        content: { message: 'Home content' }
       };
       const stateAfter = {
-        message: 'hello'
+        fetching: false,
+        content: { message: 'Home content' }
       };
       deepFreeze(action);
       deepFreeze(stateBefore);
-      expect(helloReducer(stateBefore, action)).to.eql(stateAfter);
+      expect(apiReducer(stateBefore, action)).to.eql(stateAfter);
     });
   });
 
