@@ -1,4 +1,4 @@
-import { SERVER_URI } from '../constants/index';
+import { SERVER_URI } from '../constants/';
 
 export const fetch = ({ path, type, data }) => {
   console.log(`${type} ${SERVER_URI}${path}`);
