@@ -1,4 +1,4 @@
-import { SERVER_URI } from '../constants/';
+import { SERVER_URI } from '../../client/constants/';
 
 export const fetch = ({ path, type, data }) => {
   console.log(`${type} ${SERVER_URI}${path}`);
